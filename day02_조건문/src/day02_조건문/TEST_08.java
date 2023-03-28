@@ -1,14 +1,13 @@
-package day02_조건문;
+package day02_home;
 
 import java.util.Scanner;
 
-public class TEST_08 {
+public class TEST_HOME {
 
 	public static void main(String[] args) {
-		// 5명의 학생에게 취미를 물어본 결과를 그래프로 처리
 		Scanner scan = new Scanner(System.in);
 		
-		String[] hobby = {"Movie", "Music", "Cycle", "Fishing"};
+		String[] hobby_name = {"Movie", "Music", "Cycle", "Fishing"};
 		int[] num = new int[5];
 		
 		for(int i = 0; i < 5; i++) {
@@ -17,29 +16,39 @@ public class TEST_08 {
 			num[i] = scan.nextInt();
 		}
 		
-		System.out.print("Movie : ");
-		int cnt = 0;
 		int Movie = 0;
 		int Music = 0;
+		int Cycle = 0;
+		int Fishing = 0;
 		
 		for(int i = 0; i < num.length; i++) {
-			if(num[i] == 1)
+			switch(num[i]) {
+			case 1:
 				Movie++;
-		}
-		
-		for(int i = 0; i < num.length; i++) {
-			if(num[i] == 2)
+				break;
+			case 2:
 				Music++;
+				break;
+			case 3:
+				Cycle++;
+				break;
+			case 4:
+				Fishing++;
+				break;
+			}
 		}
 		
+		int[] hobby = {Movie, Music, Cycle, Fishing};
 		
-		for(int i = 0; i < Movie; i++) {
-			System.out.print("▦");
-		}
+		System.out.println();
+		System.out.println("[ 설문조사 결과 ]");
 		
-		
-		for(int i = 0; i < 4; i++) {
-			System.out.printf("%s : %c", hobby[i], );
+		for(int i = 0; i < hobby.length; i++) {
+			System.out.printf("%s : ", hobby_name[i]);
+			for(int j = 0; j < hobby[i]; j++) {
+				System.out.printf("▦");
+			}
+			System.out.println();
 		}
 	}
 
