@@ -4,34 +4,35 @@ import java.util.Scanner;
 
 public class M04 {
 
-	static void scaling(String a[][]) {
+	static void printing(int a[][]) {
+		
 		for(int i = 0; i < 3; i++ ) {
+			int sum = 0;
 			for(int j = 0; j < 3; j++) {
-				System.out.print(a[i][j] + " ");
+				System.out.printf("%3d ", a[i][j]);
+				sum += a[i][j];
 			}
-			System.out.println();
+			
+			System.out.printf("%3d\n",sum);
 		}
 	}
 	
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
-//		String arr[][] = new String[3][];
-		int arr[][] = new int[3][];
+		int arr[][] = new int[3][3];
 		
 		for(int i = 0; i < 3; i++) {
 			System.out.printf("%d 행 : ", i+1);
-			String num = scan.nextLine();
-			int nums = Integer.parseInt(num);
-			System.out.println(nums);
-//			String[] nums = num.split(" "); 
-//			for(int j = 0; j < 3; j++) {
-//				arr[i][j] = 
-//			}
+			for(int j = 0; j < 3; j++) {
+				int nums = scan.nextInt();
+				arr[i][j] = nums;
+			}
+			
 		}
 		
 		System.out.println("===== 최종 결과 =====");
 		
-//		scaling(arr);
+		printing(arr);
 	}
 
 }
