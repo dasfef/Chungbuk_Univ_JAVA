@@ -1,4 +1,4 @@
-package day04;
+package class_;
 
 public class Day {
 	private String work;
@@ -6,6 +6,7 @@ public class Day {
 	public String get() {return work;}
 	public void show() {
 		if(work == null) System.out.println("없습니다");
-		else System.out.println(work + " 입니다");
+		else System.out.println(work + "입니다");
 	}
+
 }
