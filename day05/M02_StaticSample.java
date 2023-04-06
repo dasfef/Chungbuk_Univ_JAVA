@@ -1,0 +1,17 @@
+package day05;
+
+public class M02_StaticSample {
+	public int n;
+	public void g() {
+		m = 20;
+	}
+	
+	public void h() {
+		m = 30;
+	}
+	
+	public static int m;
+	public static void f() {
+		m = 5;
+	}
+}
