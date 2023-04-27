@@ -8,9 +8,13 @@ public class UserEx {
 		while(true) {
 			System.out.print("이름, 타입(학생, 교직원, 시민) 입력 >> ");
 			String name = scan.next();
+			if(name.equals("exit")) {
+				System.out.println("프로그램 종료.");
+				return;
+			}
 			String type = scan.next();
 			User user = null;
-
+			
 			switch(type) {
 			case "학생" :
 				user = new Student(); break;
@@ -19,10 +23,10 @@ public class UserEx {
 			case "시민" :
 				user = new Citizen(); break;
 			default :
-				System.out.println("타입이 맞지 않습니다. 다시 입력해주세요."); continue;
+				System.out.println("잘못된 타입입니다. 다시 입력해주세요."); continue;
 			}
 			user.setValue(name, type);
-			System.out.println(user.getType() + " " + user.getName() + "(가) 도서관을 이용합니다.");
+			System.out.println(user.getType() + " " + user.getName() + "(가) 도서관을 이용중입니다.");
 		}
 	}
 }

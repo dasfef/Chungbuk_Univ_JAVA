@@ -10,10 +10,10 @@ public class User {
 	}
 	
 	public String getName() {
-		return "s";
+		return null;
 	}
-
+	
 	public String getType() {
-		return "S";
+		return null;
 	}
 }
